@@ -55,7 +55,6 @@ let g:coc_global_extensions = [
 			\ 'coc-tsserver',
 			\ 'coc-eslint',
 			\ 'coc-rust-analyzer',
-			\ 'coc-highlight',
 			\ 'coc-emoji',
 			\ 'coc-snippets',
 			\ ]

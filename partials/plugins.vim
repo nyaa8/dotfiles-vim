@@ -15,6 +15,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'junegunn/fzf'
 
 " Plug 'zchee/nvim-go', { 'do': 'make'}
