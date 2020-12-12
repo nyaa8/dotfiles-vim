@@ -4,11 +4,7 @@ set showtabline=2
 set termguicolors
 syntax enable
 
-colorscheme sonokai
+colorscheme embark
 
-let g:lightline = {
-	\ 'colorscheme': g:colors_name,
-	\ 'tabline': { 'left': [['buffers']], 'right': [['close']] },
-	\ 'component_expand': { 'buffers': 'lightline#bufferline#buffers' },
-	\ 'component_type': { 'buffers': 'tabsel' },
-	\ }
+" Fixes Alacritty's transparency issues
+hi Normal ctermbg=NONE guibg=NONE
