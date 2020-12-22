@@ -30,6 +30,7 @@ function! PackagerInit() abort
 	if !exists('g:vscode')
 		" call packager#add('yunree/codestats.nvim')
 
+		call packager#add('vimwiki/vimwiki')
 		call packager#add('arzg/vim-rust-syntax-ext')
 		call packager#add('cespare/vim-toml')
 		call packager#add('digitaltoad/vim-pug')
@@ -46,6 +47,7 @@ command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'forc
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
 
+packadd vimwiki
 packadd nvim-lspconfig
 
 " augroup packager_filetype

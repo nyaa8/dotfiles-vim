@@ -20,6 +20,9 @@ nnoremap <silent> <s-tab> :bp<cr>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 nnoremap <Leader>l :ls<CR>:b<space>
 
+tnoremap <Esc> <C-\><C-n>
+tnoremap <silent><S-Esc> <C-\><C-n>:q!<cr>
+
 nmap <silent> <c-s> :w<cr>
 imap <silent> <c-s> <esc>:write<cr>a
 
