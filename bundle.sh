@@ -6,6 +6,6 @@ if ( ! -d ~/.config/nvim/pack/packager/opt/vim-packager ) then
 endif
 
 cd ~/.config/nvim/partials
-cat $config_files | sed -e '/^"/ d' -e '/^\s*$/ d' > ../init.vim
+cat $config_files | sed -e '/^	*"/ d' -e '/^\s*$/ d' > ../init.vim
 nvim +PackagerInstall
 
