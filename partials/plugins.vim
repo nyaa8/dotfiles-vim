@@ -19,25 +19,15 @@ function! PackagerInit() abort
 	" call packager#add('jacoborus/tender.vim')
 	call packager#add('embark-theme/vim')
 
-	call packager#add('andymass/vim-matchup')
-	call packager#add('tpope/vim-surround')
-	call packager#add('tpope/vim-commentary')
 	call packager#add('norcalli/nvim-colorizer.lua')
 	call packager#add('neovim/nvim-lspconfig')
 
 	call packager#add('editorconfig/editorconfig-vim')
 
-	if !exists('g:vscode')
-		" call packager#add('yunree/codestats.nvim')
-
-		call packager#add('arzg/vim-rust-syntax-ext')
-		call packager#add('cespare/vim-toml')
-		call packager#add('digitaltoad/vim-pug')
-		call packager#add('fatih/vim-go')
-		call packager#add('georgewitteman/vim-fish')
-		call packager#add('othree/html5.vim')
-		call packager#add('ziglang/zig.vim')
-	endif
+	call packager#add('fatih/vim-go')
+	call packager#add('georgewitteman/vim-fish')
+	call packager#add('othree/html5.vim')
+	call packager#add('ziglang/zig.vim')
 
 endfunction
 
@@ -45,11 +35,4 @@ command! PackagerInstall call PackagerInit() | call packager#install()
 command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'force_hooks': '<bang>' })
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
-
-packadd nvim-lspconfig
-
-" augroup packager_filetype
-" 	autocmd!
-" 	autocmd FileType zig packadd zig.vim
-" augroup END
 

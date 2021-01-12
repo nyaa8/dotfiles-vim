@@ -1,39 +1,33 @@
-set number relativenumber signcolumn=yes
-set hidden noshowmode shortmess+=c
-set nobackup nowritebackup undofile
-set updatetime=150
+set number relativenumber
+set shortmess+=c list hlsearch incsearch
+set hidden undofile
+set inccommand=nosplit mouse=a
 
-set inccommand=nosplit
-set mouse=a
+set encoding=utf-8
+set smarttab autoindent tabstop=4 shiftwidth=4
 
-" spaces
-" set expandtab shiftwidth=4 tabstop=4
+set completeopt=longest,menuone
+set omnifunc+=syntaxcomplete#Complete
 
-" tabs
-set autoindent noexpandtab tabstop=4 shiftwidth=4
+inoremap <expr> <silent> <C-Space> pumvisible() ? "" : "\<C-x><C-o>"
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
 
 let mapleader = " "
 
-nnoremap <silent> <esc><esc> <esc>:noh<cr><esc>
-nnoremap <silent> <tab> :bn<cr>
-nnoremap <silent> <s-tab> :bp<cr>
+nnoremap <silent> <Esc><Esc> <Esc>:noh<CR><Esc>
+nnoremap <silent> <Tab> :bn<CR>
+nnoremap <silent> <S-Tab> :bp<CR>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
-nnoremap <Leader>l :ls<CR>:b<space>
+nnoremap <Leader>l :ls<CR>:b<Space>
 
-nmap <silent> <c-s> :w<cr>
-imap <silent> <c-s> <esc>:write<cr>a
-
-nmap <silent> <Leader>rr :so %<cr>
-
-" tab characters >y< 
-set list listchars=tab:>-
-
-" Disable matchit
-let g:loaded_matchit = 1
+nmap <silent> <C-s> :w<CR>
+imap <silent> <C-s> <Esc>:write<CR>a
 
 filetype plugin on
-
-set omnifunc=syntaxcomplete#Complete
+syntax enable
 
 autocmd FileType fish compiler fish
-autocmd BufNewFile,BufRead *.pcss set filetype=postcss

@@ -1,8 +1,6 @@
 " Theme configuration
 set background=dark
-set showtabline=2
 set termguicolors
-syntax enable
 
 colorscheme embark
 
