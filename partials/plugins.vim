@@ -24,6 +24,7 @@ function! PackagerInit() abort
 
 	call packager#add('editorconfig/editorconfig-vim')
 
+	call packager#add('leafOfTree/vim-svelte-plugin')
 	call packager#add('fatih/vim-go')
 	call packager#add('georgewitteman/vim-fish')
 	call packager#add('othree/html5.vim')
